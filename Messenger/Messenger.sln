@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerService", "MessengerService\MessengerService.csproj", "{40D08855-50FB-4972-AD77-2353F00E5445}"
 EndProject
@@ -9,7 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientLib", "ClientLib\Clie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLib", "ServiceLib\ServiceLib.csproj", "{B6C30CAC-60D4-43E2-AE43-61F30580228B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobile.Android", "Mobile\Mobile.Android\Mobile.Android.csproj", "{4B343385-9D7F-459C-90CA-E5B51B41F523}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Mobile", "Mobile\Mobile\Mobile.shproj", "{BE55569A-E154-4243-B0B1-1E7F8FEDA579}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Mobile\Mobile\Mobile.projitems*{4b343385-9d7f-459c-90ca-e5b51b41f523}*SharedItemsImports = 4
+		Mobile\Mobile\Mobile.projitems*{be55569a-e154-4243-b0b1-1e7f8feda579}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -27,6 +35,12 @@ Global
 		{B6C30CAC-60D4-43E2-AE43-61F30580228B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6C30CAC-60D4-43E2-AE43-61F30580228B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6C30CAC-60D4-43E2-AE43-61F30580228B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B343385-9D7F-459C-90CA-E5B51B41F523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B343385-9D7F-459C-90CA-E5B51B41F523}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B343385-9D7F-459C-90CA-E5B51B41F523}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4B343385-9D7F-459C-90CA-E5B51B41F523}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B343385-9D7F-459C-90CA-E5B51B41F523}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B343385-9D7F-459C-90CA-E5B51B41F523}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
