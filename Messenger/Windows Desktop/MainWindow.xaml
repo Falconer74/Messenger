@@ -4,9 +4,122 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Windows_Desktop"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+		Background="{DynamicResource MaterialDesignPaper}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+		FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        Title="MainWindow" Height="570" Width="855" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+
+	<Grid
+		>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25"></RowDefinition>
+			<RowDefinition></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<materialDesign:ColorZone
+			Grid.Row="0"
+			Mode="PrimaryMid"
+			materialDesign:ShadowAssist.ShadowDepth="Depth1"
+			materialDesign:ShadowAssist.ShadowEdges="Bottom"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch">
+			
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition></ColumnDefinition>
+					<ColumnDefinition Width="25"></ColumnDefinition>
+					<ColumnDefinition Width="25"></ColumnDefinition>
+					<ColumnDefinition Width="25"></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+
+				<materialDesign:PackIcon Kind="WindowClose"
+										 Grid.Column="3"
+										 HorizontalAlignment="Center"
+										 VerticalAlignment="Center"
+										 />
+
+				<materialDesign:PackIcon Kind="WindowMaximize"
+										 Grid.Column="2"
+										 HorizontalAlignment="Center"
+										 VerticalAlignment="Center"
+										 />
+
+				<materialDesign:PackIcon Kind="WindowMinimize"
+										 Grid.Column="1"
+										 HorizontalAlignment="Center"
+										 VerticalAlignment="Center"
+										 />
+			</Grid>
+		</materialDesign:ColorZone>
+		
+		<materialDesign:Transitioner
+	AutoApplyTransitionOrigins="True"
+	SelectedIndex="0"
+		Grid.Row="1"
+		>
+		<materialDesign:TransitionerSlide>
+			<materialDesign:Card
+			Width="800"
+			Height="450"
+				UniformCornerRadius="5"
+				Background="#BBDEFB"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+				<Grid Width="700"
+		  Height="500">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="0.8*"></ColumnDefinition>
+						<ColumnDefinition></ColumnDefinition>
+					</Grid.ColumnDefinitions>
+
+					<Image Source="C:\Users\Ivan Smyalko\Source\Repos\Messenger\Messenger\Windows Desktop\Resources\logo.png"
+			   Width="300">
+					</Image>
+
+
+					<Grid Grid.Column="1">
+						<Grid.RowDefinitions>
+							<RowDefinition></RowDefinition>
+							<RowDefinition Height="1.2*"></RowDefinition>
+						</Grid.RowDefinitions>
+
+						<TextBlock
+					   Margin="0,4,0,4"
+					   Style="{StaticResource MaterialDesignDisplay1TextBlock}"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Bottom">
+			Welcome to Messenger
+						</TextBlock>
+
+						<Button Style="{DynamicResource MaterialDesignRaisedButton}"
+					Grid.Row="1"
+					FontSize="27"
+					Content="Next"
+					Height="60"
+					Margin="100"
+									Command="{x:Static materialDesign:Transitioner.MoveNextCommand}"/>
+					</Grid>
+
+				</Grid>
+			</materialDesign:Card>
+		</materialDesign:TransitionerSlide>
+		
+		<materialDesign:TransitionerSlide>
+			<materialDesign:Card
+			Width="800"
+			Height="450"
+				UniformCornerRadius="5"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center">
+				<Button
+				Command="{x:Static materialDesign:Transitioner.MoveNextCommand}"
+				Content="{materialDesign:PackIcon Pill}"
+				Style="{StaticResource MaterialDesignFloatingActionAccentButton}" />
+			</materialDesign:Card>
+		</materialDesign:TransitionerSlide>
+
+
+	</materialDesign:Transitioner>
+	</Grid>
 </Window>
