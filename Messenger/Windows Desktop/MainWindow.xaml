@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Windows_Desktop"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+		Background="{DynamicResource MaterialDesignPaper}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+		FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        Title="MainWindow" Height="570" Width="855" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+
+	<Grid>
+		
+	</Grid>
+	
 </Window>
