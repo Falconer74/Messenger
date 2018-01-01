@@ -23,5 +23,10 @@ namespace Windows_Desktop.Windows.LoginWindow
         {
             InitializeComponent();
         }
+
+        private void Button_NextFirst_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

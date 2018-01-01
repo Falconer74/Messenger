@@ -10,10 +10,9 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Windows_Desktop
+namespace Windows_Desktop.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,11 +22,6 @@ namespace Windows_Desktop
         public MainWindow()
         {
             InitializeComponent();
-        }
-        
-        private void Button_NextFirst_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }
