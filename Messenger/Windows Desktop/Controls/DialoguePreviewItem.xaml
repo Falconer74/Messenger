@@ -1,0 +1,85 @@
+﻿	<UserControl x:Class="Windows_Desktop.Controls.DialoguePreviewItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Windows_Desktop"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="300"
+			 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<!-- Avatar -->
+			<ColumnDefinition Width="75"></ColumnDefinition>
+			<!-- Name and message -->
+			<ColumnDefinition></ColumnDefinition>
+			<!-- Badge and time -->
+			<ColumnDefinition Width="0.5*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<!-- Avatar -->
+		<Ellipse Height="60"
+					 Width="60"
+					 Fill="Yellow"
+					 Stroke="Red"
+					 Grid.Column="0"/>
+
+		<Label Content="JD"
+				   HorizontalContentAlignment="Center"
+				   VerticalContentAlignment="Center"
+				   FontSize="30"
+				   FontFamily="Roboto"
+				   Grid.Column="0"/>
+
+		<!-- Name and message -->
+		<Grid Grid.Column="1">
+			<Grid.RowDefinitions>
+				<!-- Conversation name -->
+				<RowDefinition></RowDefinition>
+				<!-- Last message text -->
+				<RowDefinition></RowDefinition>
+			</Grid.RowDefinitions>
+
+			<!-- Conversation name -->
+			<Label Content="John Doe"
+				   FontFamily="Roboto Bold"
+				   Grid.Row="0"
+				   FontSize="15"
+				   x:Name="Label_ConversationName"/>
+
+			<!-- Last message text -->
+			<Label Content="Hello, nigga how are .."
+					   FontFamily="Roboto Light"
+					   Grid.Row="1"
+					   FontSize="14"
+				   x:Name="Label_MessageText"/>
+		</Grid>
+
+		<Grid Grid.Column="2">
+			<Grid.RowDefinitions>
+				<!-- Last reveived message time -->
+				<RowDefinition></RowDefinition>
+				<!-- Last reveived message date -->
+				<RowDefinition></RowDefinition>
+			</Grid.RowDefinitions>
+
+			<!-- Last reveived message time -->
+			<Label Grid.Row="0"
+					   Content="14:44"
+					   FontFamily="Roboto"
+					   HorizontalContentAlignment="Right"
+					   VerticalContentAlignment="Center"
+				   x:Name="Label_MessageTime"/>
+
+			<!-- Last reveived message date -->
+			<Label Grid.Row="1"
+						   Content="12/27/2017"
+						   FontFamily="Roboto Light"
+						   HorizontalAlignment="Right"
+				   x:Name="Label_MessageDate"/>
+
+		</Grid>
+
+	</Grid>
+</UserControl>
