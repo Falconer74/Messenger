@@ -55,6 +55,7 @@
     <Compile Include="Entities\Message.cs" />
     <Compile Include="Entities\UserProfile.cs" />
     <Compile Include="MessengerContext.cs" />
+    <Compile Include="MessengerDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
