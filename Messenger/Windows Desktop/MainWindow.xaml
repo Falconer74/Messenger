@@ -11,7 +11,7 @@
         Title="MainWindow" Height="570" Width="855" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
 
 	<Grid>
-		
+		<!-- Lol some text -->
 	</Grid>
 	
 </Window>
