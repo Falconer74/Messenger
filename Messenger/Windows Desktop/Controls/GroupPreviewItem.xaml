@@ -1,13 +1,11 @@
-﻿	<UserControl x:Class="Windows_Desktop.Controls.DialoguePreviewItem"
+﻿<UserControl x:Class="Windows_Desktop.Controls.GroupPreviewItem"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Windows_Desktop.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="60" d:DesignWidth="300"
-			 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
-
+             d:DesignHeight="60" d:DesignWidth="300">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<!-- Avatar -->
@@ -21,11 +19,11 @@
 		<!-- Avatar -->
 		<Ellipse Height="60"
 					 Width="60"
-					 Fill="Yellow"
-					 Stroke="Red"
+					 Fill="Green"
+					 Stroke="Blue"
 					 Grid.Column="0"/>
 
-		<Label Content="JD"
+		<Label Content="NG"
 				   HorizontalContentAlignment="Center"
 				   VerticalContentAlignment="Center"
 				   FontSize="30"
@@ -35,36 +33,47 @@
 		<!-- Name and message -->
 		<Grid Grid.Column="1">
 			<Grid.RowDefinitions>
-				<!-- Conversation name -->
 				<RowDefinition></RowDefinition>
-				<!-- Last message text -->
 				<RowDefinition></RowDefinition>
 			</Grid.RowDefinitions>
 
-			<!-- Conversation name -->
-			<Label Content="John Doe"
-				   FontFamily="Roboto Bold"
-				   Grid.Row="0"
-				   FontSize="15"
+			<Label Content="Niggas"
+					   FontFamily="Roboto Black"
+					   Grid.Row="0"
+						FontSize="15"
 				   x:Name="Label_ConversationName"/>
 
-			<!-- Last message text -->
-			<Label Content="Hello, nigga how are .."
+			<Grid Grid.Row="1">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition></ColumnDefinition>
+					<ColumnDefinition></ColumnDefinition>
+				</Grid.ColumnDefinitions>
+
+				<Label Content="John Doe:"
+							   FontFamily="Roboto Bold"
+							   Grid.Column="0"
+							   FontSize="14"
+							   HorizontalContentAlignment="Stretch"
+					   x:Name="Label_Sender"/>
+
+				<Label Content="Hello, nig.."
 					   FontFamily="Roboto Light"
-					   Grid.Row="1"
+					   Grid.Column="1"
 					   FontSize="14"
-				   x:Name="Label_MessageText"/>
+					   HorizontalContentAlignment="Stretch"
+					   x:Name="Label_MessageText"/>
+			</Grid>
+
+
 		</Grid>
 
 		<Grid Grid.Column="2">
 			<Grid.RowDefinitions>
-				<!-- Last reveived message time -->
 				<RowDefinition></RowDefinition>
-				<!-- Last reveived message date -->
 				<RowDefinition></RowDefinition>
 			</Grid.RowDefinitions>
 
-			<!-- Last reveived message time -->
+			<!-- Time -->
 			<Label Grid.Row="0"
 					   Content="14:44"
 					   FontFamily="Roboto"
@@ -72,7 +81,7 @@
 					   VerticalContentAlignment="Center"
 				   x:Name="Label_MessageTime"/>
 
-			<!-- Badge -->
+
 			<local:Badge Grid.Row="1"
 						 HorizontalAlignment="Right"
 						 Margin="0,0,10,0"

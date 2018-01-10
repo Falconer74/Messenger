@@ -18,9 +18,9 @@ using Windows_Desktop.Classes;
 namespace Windows_Desktop.Controls
 {
     /// <summary>
-    /// Interaction logic for DialoguePreviewItem.xaml
+    /// Interaction logic for GroupPreviewItem.xaml
     /// </summary>
-    public partial class DialoguePreviewItem : UserControl, IConversationPreviewItem
+    public partial class GroupPreviewItem : UserControl, IConversationPreviewItem
     {
         public string CName
         {
@@ -31,6 +31,19 @@ namespace Windows_Desktop.Controls
             set
             {
                 Label_ConversationName.Content = value;
+            }
+        }
+
+        //Name of sender of the last message
+        public string Sender
+        {
+            get
+            {
+                return Label_Sender.Content.ToString();
+            }
+            set
+            {
+                Label_Sender.Content = value;
             }
         }
 
@@ -76,15 +89,15 @@ namespace Windows_Desktop.Controls
             }
         }
 
-        public DialoguePreviewItem()
-        {
-            InitializeComponent();
-        }
-
-
         public void InitializePreview()
         {
             throw new NotImplementedException();
         }
+
+        public GroupPreviewItem()
+        {
+            InitializeComponent();
+        }
+
     }
 }

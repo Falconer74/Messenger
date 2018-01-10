@@ -9,13 +9,13 @@ namespace Windows_Desktop.Classes
     /// <summary>
     /// This interface describes the main work of the preview of the dialogue in the list of dialogues
     /// </summary>
-    public interface ConversationPreviewItem
+    public interface IConversationPreviewItem
     {
         ///Automatically set preview values if there are necessary and valid data in the entity of the dialogue
         void InitializePreview();
 
-        ///Name of conversation on preview
-        string Name { get; set; }
+        ///Name of conversation on preview (or sender in group)
+        string CName { get; set; }
 
         ///Text of last message on preview
         string Text { get; set; }
