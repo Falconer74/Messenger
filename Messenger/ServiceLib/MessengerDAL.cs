@@ -21,12 +21,29 @@ namespace ServiceLib
             return Context.Accounts.Where(a => a.Login == login).FirstOrDefault();
         }
 
-        public void RegisterNewAccount(Account account, UserProfile profile)
+        public void AddNewAccount(Account account, UserProfile profile)
         {
             account.Profile = profile;
             profile.Account = account;
             Context.Accounts.Add(account);
             Context.Profiles.Add(profile);
+        }
+
+        public void AddNewDialog(Dialog dialog) {
+            Context.Dialogues.Add(dialog);
+        }
+
+        public void AddMembership(Membership membership) {
+            Context.Memberships.Add(membership);
+        }
+
+        public void AddMessage(Message message)
+        {
+            Context.Messages.Add(message);
+        }
+
+        public ICollection<Message> GetLastMessages(int dialogId) {
+            return Context.Messages.Where(m => m.DialogId == dialogId).ToList();
         }
 
         public ICollection<Dialog> GetUserDialogues(int userId)
@@ -35,10 +52,16 @@ namespace ServiceLib
                                          join membership in Context.Memberships
                                             on dialog.DialogId equals membership.DialogId
                                          join user in Context.Profiles
-                                            on membership.UserProfileId equals user.AccountId
+                                            on membership.AccountId equals user.AccountId
                                          where user.AccountId == userId
                                          select dialog).ToList();
             return result;
+        }
+
+        public void DeleteMembership(int membershipId) {
+            Membership membership = Context.Memberships.Where(m => m.MembershipId == membershipId).FirstOrDefault();
+
+            Context.Memberships.Remove(membership);
         }
     }
 }
