@@ -9,7 +9,7 @@ namespace ServiceLib.Entities
     public class Membership
     {
         public int MembershipId { get; set; }
-        public int UserProfileId { get; set; }
+        public int AccountId { get; set; }
         public int DialogId { get; set; }
 
         public UserProfile Profile { get; set; }
